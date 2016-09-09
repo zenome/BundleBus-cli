@@ -1,5 +1,8 @@
+# What is BundleBus? #
+Check BundleBus github page [BundleBus](https://github.com/zenome/BundleBus) 
+
 # BundleBus cli #
-* BundleBus is a module to help help the react-native application developers to easily release/deploy their application. Currently, it only supports 'github.com' but will support any other git based repository.
+* BundleBus is a module to help the react-native application developers to easily release/deploy their application. Currently, it only supports 'github.com' but will support any other git based repository.
 
 ## Prerequisite ##
 Download and run BundleBus server
@@ -13,6 +16,7 @@ Download and run BundleBus server
 
 ### Register ###
 * 'register' command will registers your react-native app to the server.
+
 #### Command 
 * Run below command from your project root folder where 'package.json' reside.
 ~~~
@@ -24,6 +28,7 @@ Repository - github token : {Enter your github token}
 
 ### Release ###
 * 'release' command will pull your sources from the github and build it.
+
 #### Command
 * Run below command from your project root folder where 'package.json' reside.
 ~~~
@@ -34,6 +39,7 @@ where os should be 'android' or 'ios'.
 
 ### Deploy ###
 * Once the app is ready to be published, use 'deploy' command to simply do the job.
+
 #### Command
 * Run below command from your project root folder where 'package.json' reside.
 ~~~~
