@@ -2,7 +2,7 @@
 Check BundleBus github page [BundleBus](https://github.com/zenome/BundleBus) 
 
 # BundleBus cli #
-* BundleBus is a module to help the react-native application developers to easily release/deploy their application. Currently, it only supports `github.com` but will support any other git based repository.
+* BundleBus-cli is a module to help the react-native application developers to easily release/deploy their application. Currently, it only supports `github.com` but will support any other git based repository.
 
 ## Prerequisite ##
 Download and run BundleBus server
@@ -20,7 +20,7 @@ Download and run BundleBus server
 #### Command 
 * Run below command from your project root folder where `package.json` reside.
 ~~~
-> bundebus register
+> bundlebus register
 Repository clone url : {Enter your github repository}
 Repository - github token : {Enter your github token}
 ~~~
