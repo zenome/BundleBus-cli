@@ -46,6 +46,16 @@ where os should be `android` or `ios`.
 > bundlebus deploy <os>
 ~~~~
 
+### Set backend server address
+* I believe you already download and run [bundlebus-backend](https://github.com/zenome/BundleBus_backend).
+* This command let you set your backend server address.
+
+#### Command
+* Run below command.
+~~~~
+> bundlebus server <http://youraddress:port>
+~~~~
+
 # License #
 The MIT License (MIT)
 
