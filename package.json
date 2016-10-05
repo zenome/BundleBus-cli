@@ -1,6 +1,6 @@
 {
   "name": "bundlebus-cli",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A framework for releasing/deploying react-native apps",
   "license": "MIT",
   "author": "ZENOME, Inc",
@@ -28,6 +28,7 @@
     "bundlebus": "app/bundlebus.js"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "bundlebus"
   ]
 }
