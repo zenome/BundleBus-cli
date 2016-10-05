@@ -10,7 +10,6 @@ module.exports = run
 
 const readline = require('readline')
 const needle = require('needle')
-// const os = require('os')
 const fs = require('fs')
 const jsonfile = require('jsonfile')
 
@@ -135,7 +134,7 @@ function registerApp (appname, path, key, callback) {
     // Check whether the file is already exists.
     //   If the file is already existed, append the result if app name is not exist.
 
-    var bbConfigJson = {}
+    let bbConfigJson = {}
     try {
       fs.accessSync(configFile, fs.F_OK)
       bbConfigJson = jsonfile.readFileSync(configFile)

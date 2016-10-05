@@ -6,15 +6,35 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-
+const fs = require('fs')
 const os = require('os')
+const jsonfile = require('jsonfile')
 
-var SERVER_ADDRESS_DEV1 = 'http://192.168.0.15:3000'
-var SERVER_ADDRESS_PRODUCTION = ''
+let configFile = process.cwd() + '/.bundlebus.access.config'
+let globalConfig = process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'] + '/.bundlebus.config'
+let accessKey = 'AccessKey'
+let serverAddr = 'Server'
+let getCurServer = function() {
+  let ret = 'http://localhost:3000';
+  try {
+    fs.accessSync(globalConfig, fs.F_OK);
+    let config = jsonfile.readFileSync(globalConfig);
+    if (config.Server) {
+      ret = config.Server;
+    }
+  } catch (e) {
+    if (e.code === 'ENOENT') {
+      console.log('ENOENT');
+      jsonfile.writeFileSync(globalConfig, {Server : curServer}, {spaces: 2});
+    } else {
+      console.log(e);
+    }
+  }
 
-var curServer = SERVER_ADDRESS_DEV1
-var configFile = process.cwd() + '/.bundlebus.config'
-var accessKey = 'AccessKey'
+  return ret;
+}
+
+let curServer = getCurServer();
 
 module.exports = {
   SERVER: curServer,
@@ -24,5 +44,7 @@ module.exports = {
   SERVER_RELEASE_NOT_DEPLOY: curServer + '/api/notdeployedlist',
   SERVER_DEPLOY: curServer + '/api/deploy',
   BUNDLE_BUS_CONFIG: configFile,
-  ACCESS_KEY: accessKey
+  BUNDLE_BUS_GLOBAL_CONFIG: globalConfig,
+  ACCESS_KEY: accessKey,
+  SERVER: serverAddr
 }
