@@ -6,6 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+'use strict';
+
 const fs = require('fs')
 const os = require('os')
 const jsonfile = require('jsonfile')

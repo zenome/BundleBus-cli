@@ -6,6 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+'use strict';
+
 var hasSomething = function isValid (str) {
   if (typeof (str) !== 'string') {
     console.log(str + ' is not string')
