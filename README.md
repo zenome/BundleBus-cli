@@ -8,11 +8,18 @@ Check BundleBus github page [BundleBus](https://github.com/zenome/BundleBus)
 Download and run BundleBus server
 
 ## How to install ##
+This command may ask your root permission.
 ~~~
 > npm install bundlebus-cli -g
 ~~~
 
 ## How to use ##
+
+### Server ####
+* `server` command will set your backend server address. Default is 'http://localhost:3000'. If your server is not running on localhost:3000, please run this command to set the correct server address and port.
+~~~~
+> bundlebus server {http://address:port}
+~~~~
 
 ### Register ###
 * `register` command will registers your react-native app to the server.
