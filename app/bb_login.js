@@ -41,13 +41,13 @@ Menu.prototype.hiddenStdin = function(query, rl, callback) {
   process.stdin.on('data', function(char) {
     char = char + '';
     switch(char) {
-      case "\n" :
-      case "\r" :
-      case "\u0004" :
+      case '\n' :
+      case '\r' :
+      case '\u0004' :
         process.stdin.pause();
         break;
       default :
-        process.stdout.write("\033[2K\033[200D" + query + Array(rl.line.length + 1).join("*"));
+        process.stdout.write('0o33[2K0o33[200D' + query + Array(rl.line.length + 1).join("*"));
         break;
     }
   });

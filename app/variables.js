@@ -27,7 +27,7 @@ let getCurServer = function() {
   } catch (e) {
     if (e.code === 'ENOENT') {
       console.log('ENOENT');
-      jsonfile.writeFileSync(globalConfig, {Server : curServer}, {spaces: 2});
+      jsonfile.writeFileSync(globalConfig, {Server : ret}, {spaces: 2});
     } else {
       console.log(e);
     }

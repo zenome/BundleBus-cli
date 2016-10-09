@@ -32,7 +32,7 @@ function Menu (cb) {
   this.compose_out = '   '
 }
 
-Prompt = [
+let Prompt = [
   'Input your email address : ',
   'Password : '
 ]
