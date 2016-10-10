@@ -18,7 +18,7 @@ Download and run BundleBus server
 * `register` command will registers your react-native app to the server.
 
 #### Command 
-* Run below command from your project root folder where `package.json` reside.
+* Run below command from your react-native-app root folder where `package.json` reside.
 ~~~
 > bundlebus register
 Repository clone url : {Enter your github repository}
@@ -30,7 +30,7 @@ Repository - github token : {Enter your github token}
 * `release` command will pull your sources from the github and build it.
 
 #### Command
-* Run below command from your project root folder where `package.json` reside.
+* Run below command from your react-native-app root folder where `package.json` reside.
 ~~~
 > bundlebus release <os>
 ~~~
