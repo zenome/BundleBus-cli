@@ -15,17 +15,19 @@ This command may ask your root permission.
 
 ## How to use ##
 
-### Server ####
-* `server` command will set your backend server address. Default is 'http://localhost:3000'. If your server is not running on localhost:3000, please run this command to set the correct server address and port.
-~~~~
-> bundlebus server {http://address:port}
-~~~~
+### Set backend server address
+* I believe you already download and run [bundlebus-backend](https://github.com/zenome/BundleBus_backend).
+* This command let you set your backend server address.
+
+#### Command
+* Run below command.
+> bundlebus server <http://youraddress:port>
 
 ### Register ###
 * `register` command will registers your react-native app to the server.
 
 #### Command 
-* Run below command from your project root folder where `package.json` reside.
+* Run below command from your react-native-app root folder where `package.json` reside.
 ~~~
 > bundlebus register
 Repository clone url : {Enter your github repository}
@@ -37,7 +39,7 @@ Repository - github token : {Enter your github token}
 * `release` command will pull your sources from the github and build it.
 
 #### Command
-* Run below command from your project root folder where `package.json` reside.
+* Run below command from your react-native-app root folder where `package.json` reside.
 ~~~
 > bundlebus release <os>
 ~~~
@@ -51,16 +53,6 @@ where os should be `android` or `ios`.
 * Run below command from your project root folder where `package.json` reside.
 ~~~~
 > bundlebus deploy <os>
-~~~~
-
-### Set backend server address
-* I believe you already download and run [bundlebus-backend](https://github.com/zenome/BundleBus_backend).
-* This command let you set your backend server address.
-
-#### Command
-* Run below command.
-~~~~
-> bundlebus server <http://youraddress:port>
 ~~~~
 
 # License #
