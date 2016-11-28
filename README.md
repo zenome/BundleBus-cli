@@ -9,9 +9,9 @@ Download and run BundleBus server
 
 ## How to install ##
 This command may ask your root permission.
-~~~
-> npm install bundlebus-cli -g
-~~~
+````
+$ npm install bundlebus-cli -g
+````
 
 ## How to use ##
 
@@ -21,7 +21,7 @@ This command may ask your root permission.
 
 #### Command
 * Run below command.
-> bundlebus server <http://youraddress:port>
+$ bundlebus server <http://youraddress:port>
 
 ### Register ###
 * `register` command will registers your react-native app to the server.
@@ -41,7 +41,7 @@ Repository - github token : {Enter your github token}
 #### Command
 * Run below command from your react-native-app root folder where `package.json` reside.
 ~~~
-> bundlebus release <os>
+$ bundlebus release <os>
 ~~~
 where os should be `android` or `ios`.
 * the BundleBus server will pull the git sources and build it.
@@ -52,7 +52,7 @@ where os should be `android` or `ios`.
 #### Command
 * Run below command from your project root folder where `package.json` reside.
 ~~~~
-> bundlebus deploy <os>
+$ bundlebus deploy <os>
 ~~~~
 
 # License #
