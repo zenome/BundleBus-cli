@@ -21,7 +21,9 @@ $ npm install bundlebus-cli -g
 
 #### Command
 * Run below command.
+````
 $ bundlebus server <http://youraddress:port>
+````
 
 ### Register ###
 * `register` command will registers your react-native app to the server.
