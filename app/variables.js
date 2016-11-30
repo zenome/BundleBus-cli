@@ -47,6 +47,5 @@ module.exports = {
   SERVER_DEPLOY: curServer + '/api/deploy',
   BUNDLE_BUS_CONFIG: configFile,
   BUNDLE_BUS_GLOBAL_CONFIG: globalConfig,
-  ACCESS_KEY: accessKey,
-  SERVER: serverAddr
+  ACCESS_KEY: accessKey
 }
