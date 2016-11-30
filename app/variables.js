@@ -48,5 +48,4 @@ module.exports = {
   BUNDLE_BUS_CONFIG: configFile,
   BUNDLE_BUS_GLOBAL_CONFIG: globalConfig,
   ACCESS_KEY: accessKey,
-  SERVER: serverAddr
 }
