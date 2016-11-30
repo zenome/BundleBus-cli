@@ -31,7 +31,7 @@ $ bundlebus server <http://youraddress:port>
 #### Command 
 * Run below command from your react-native-app root folder where `package.json` reside.
 ~~~
-> bundlebus register
+$ bundlebus register
 Repository clone url : {Enter your github repository}
 Repository - github token : {Enter your github token}
 ~~~
