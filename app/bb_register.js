@@ -26,7 +26,7 @@ const stringUtil = require('./stringutil.js')
 // If user is already register apps, then the login's result should be the dictionary with (appname, appkey)
 
 function run (args, cb) {
-  var packageFile = {}
+  let packageFile = {}
   try {
     packageFile = jsonfile.readFileSync(process.cwd() + '/package.json')
   } catch (e) {
@@ -47,7 +47,7 @@ function Menu (cb, packageFile) {
   this.compose_out = '   '
 }
 
-var Prompt = [
+let Prompt = [
   'Repository clone url : ',
   'Repository - github token : '
 ]
@@ -102,17 +102,17 @@ function registerApp (appname, path, key, callback) {
     return
   }
 
-  var post_Data = {
+  let post_Data = {
     'appname': appname,
     'cloneurl': path,
     'github_token': key
   }
 
-  var post_options = {
+  let post_options = {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/x-www-form-urlencoded',
-      'Content-Length': Buffer.byteLength(post_Data)
+      'Content-Length': Buffer.byteLength(JSON.stringify(post_Data))
     }
   }
 
@@ -131,7 +131,7 @@ function registerApp (appname, path, key, callback) {
     }
 
     console.log('Got successful response')
-    var configFile = config.BUNDLE_BUS_CONFIG
+    let configFile = config.BUNDLE_BUS_CONFIG
 
     // Check whether the file is already exists.
     //   If the file is already existed, append the result if app name is not exist.
